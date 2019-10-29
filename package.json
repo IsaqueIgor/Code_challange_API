@@ -10,7 +10,8 @@
     "express": "^4.17.1",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.1"
+    "sequelize": "^5.21.1",
+    "tedious": "^6.6.0"
   },
   "devDependencies": {
     "docz": "^1.3.2",

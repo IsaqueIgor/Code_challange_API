@@ -1,8 +1,8 @@
-const { Sequelize , Model } = require('sequelize');
+'use strict';
 
-class User extends Model {
-  static init(sequelize) {
-    super.init({
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+      return queryInterface.createTable('users', { 
       name: {
           type: Sequelize.STRING,
           allowNull: false
@@ -23,11 +23,19 @@ class User extends Model {
       password: {
           type:Sequelize.STRING,
           allowNull: false
-        }
-    }, {
-      sequelize
-    })
-  }
-}
+        },
+      created_at: {
+          type: Sequelize.DATE,
+          allowNull: false,
+        },
+      updated_at: {
+          type: Sequelize.DATE,
+          allowNull: false,
+        },
+      });
+  },
 
-module.exports = User;
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('users');
+  }
+};

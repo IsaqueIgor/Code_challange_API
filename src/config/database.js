@@ -1,11 +1,15 @@
 module.exports = {
-    username: 'root',
-    password: 'root',
-    database: 'crud_sequelize',
-    host: '127.0.0.1',
-    dialect: 'mssql',
+    username: 'postgres',
+    password: '123',
+    server: 'localhost',
+    port: 6969,
+    database: 'aevo_postgres',
+    dialect: 'postgres',
     define: {
         timestamps: true,
         underscored: true,
     }
   }
+
+//TODO:CONFIG THE SQL SERVER DATABASE
+

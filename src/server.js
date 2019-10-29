@@ -9,4 +9,7 @@ const port = 3333;
 app.use(express.json());
 app.use(routes);
 
-app.listen(port);
+
+app.listen(port, () => {
+    console.log('The application is running on localhost:' + port);
+});
