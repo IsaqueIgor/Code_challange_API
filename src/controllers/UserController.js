@@ -15,21 +15,37 @@ module.exports = {
     return res.json(user);
   },
 
-  async update(req , res) {
+  async update(req, res) {
+    const dados = req.body;
 
-  const dados = req.body;
+    await User.update(dados, {
+        where:{
+          id: req.query.id
+        }
+      })
+      .then((data) => {
+        res.send(true)
+      }).catch((error) => {
+        console.log(error)
+        res.send(false)
+        }
+    );
+  },
 
-  await User.update(dados, {
+  async show(req, res){
+    const user = await User.findByPk(req.params.id);
+
+    return res.json(user);
+  },
+
+  async destroy(req, res){
+    await User.destroy({
       where:{
-        id: req.query.id
-      }
-    })
-    .then((data) => {
-      res.send(true)
-    }).catch((error) => {
-      console.log(error)
-      res.send(false)
-      });
+        id: req.params.id
+      } 
+    });
+
+    return res.send();
   }
 
 };
