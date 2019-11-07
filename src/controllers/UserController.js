@@ -12,7 +12,8 @@ module.exports = {
 
     const user = await User.create({ name, email , password });
 
-    return res.json(user);
+    //return res.json(user);
+    return res.json({success: true, message: 'User created with success', statusCode: 201});
   },
 
   async update(req, res) {
@@ -23,7 +24,7 @@ module.exports = {
           id: req.query.id
         }
       })
-      .then((data) => {
+      .then((data) => { TODO: //Melhorar isso
         res.send(true)
       }).catch((error) => {
         console.log(error)

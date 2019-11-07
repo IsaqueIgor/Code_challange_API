@@ -1,0 +1,40 @@
+{
+  "config": {
+    "title": "Masterclass",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "props": [],
+  "entries": [
+    {
+      "key": "src/models/User.mdx",
+      "value": {
+        "name": "User",
+        "id": "90fafa3238eb88302cb3100b1e3fa872",
+        "filepath": "src/models/User.mdx",
+        "link": "",
+        "slug": "src-models-user",
+        "route": "/src-models-user",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "user",
+            "depth": 1,
+            "value": "User"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    }
+  ]
+}
